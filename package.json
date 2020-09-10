@@ -1,0 +1,37 @@
+{
+  "name": "node-ts-boilerplate",
+  "version": "0.0.1",
+  "description": "NodeJS App boilerplate with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir build --extensions \".ts,.tsx\" --source-maps inline",
+    "clean": "del ./build",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "start": "babel-node -x \".ts\" src/index.ts",
+    "dev": "nodemon --exec npm run start -- src/index.ts"
+  },
+  "author": {
+    "name": "Deni Cho",
+    "email": "denichodev@gmail.com",
+    "url": "https://denicho.dev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denichodev/node-ts-boilerplate"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "del-cli": "^3.0.1",
+    "nodemon": "^2.0.4",
+    "typescript": "^4.0.2"
+  }
+}
