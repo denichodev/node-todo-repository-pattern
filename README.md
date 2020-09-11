@@ -1,2 +1,2 @@
-# node-ts-boilerplate
-My NodeJS App boilerplate with TypeScript
+# node-todo-repository-pattern
+Node Todo REST API with repository pattern examples
